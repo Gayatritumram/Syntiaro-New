@@ -1,0 +1,223 @@
+/* ========== Global ========== */
+.agriculture-section {
+    margin-top: 30px;
+    padding: 60px 0px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.agriculture-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* ========== Content Layout ========== */
+.agriculture-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeUp 1s ease-in-out;
+    margin-bottom: 20px;
+    padding: 0px 30px;
+}
+
+.agriculture-text {
+    flex: 1 1 400px;
+    animation: fadeLeft 1.2s ease-in-out;
+    padding-left: 10px;
+}
+
+.agriculture-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.agriculture-text ul {
+    padding-left: 20px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.agriculture-text ul li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative;
+    text-align: start;
+}
+
+.agriculture-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.agriculture-images {
+    padding: 0px 10px;
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeRight 1.2s ease-in-out;
+}
+
+.agriculture-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.agriculture-images img:hover {
+    transform: scale(1.05);
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .agriculture-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .agriculture-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .agriculture-text,
+    .agriculture-images {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .agriculture-text p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .agriculture-text ul {
+        padding-left: 25px;
+    }
+
+    .agriculture-text ul li {
+        font-size: 14.5px;
+        line-height: 1.7;
+        padding-left: 22px;
+    }
+
+    .agriculture-images {
+        gap: 16px;
+    }
+
+    .agriculture-images img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .agriculture-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .agriculture-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .agriculture-text,
+    .agriculture-images {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .agriculture-text ul {
+        margin-bottom: 0px;
+    }
+
+    .agriculture-text ul li {
+        text-align: left;
+    }
+
+    .get {
+        margin-top: -150px;
+    }
+}

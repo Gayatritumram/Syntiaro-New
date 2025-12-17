@@ -1,0 +1,221 @@
+.cloud-service-container {
+    margin-top: 30px;
+    padding: 60px 0px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cloud-service-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.cloud-service-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeUp 1s ease-in-out;
+    margin-bottom: 20px;
+    padding: 0px 30px;
+}
+
+.cloud-service-text {
+    flex: 1 1 400px;
+    animation: fadeLeft 1.2s ease-in-out;
+}
+
+.cloud-service-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.cloud-service-text ul {
+    padding-left: 20px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.cloud-service-text ul li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative;
+    text-align: start;
+}
+
+.cloud-service-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.cloud-service-images {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeRight 1.2s ease-in-out;
+}
+
+.cloud-service-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.cloud-service-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .cloud-service-container {
+        padding: 60px 0px 0px 0px;
+    }
+
+    .cloud-service-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .cloud-service-content {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .cloud-service-text,
+    .cloud-service-images {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .cloud-service-text p {
+        font-size: 15px;
+        padding-left: 0;
+        text-align: start;
+    }
+
+    .cloud-service-text ul {
+        padding-left: 30px;
+    }
+
+    .cloud-service-text ul li {
+        font-size: 14.5px;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .cloud-service-images {
+        align-items: center;
+    }
+
+    .cloud-service-images img {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cloud-service-container {
+        padding: 60px 0px 0px 0px;
+    }
+
+    .cloud-service-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .cloud-service-text p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 5px;
+    }
+
+    .cloud-service-text ul li {
+        font-size: 13.5px;
+        padding-left: 18px;
+    }
+
+    .cloud-service-images img {
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .get {
+        margin-top: -150px;
+    }
+}

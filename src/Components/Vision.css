@@ -1,0 +1,94 @@
+/* Vision Section */
+.vision-section {
+    width: 100%;
+    padding: 40px 20px 0px 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    margin-top: 40px;
+}
+
+/* Container */
+.vision-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vision-description {
+    font-size: 16px;
+    color: black;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 16px;
+}
+/* Image Wrapper */
+.vision-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vision-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Text Section */
+.vision-text {
+    flex: 2;
+    min-width: 300px;
+    padding: 10px 20px;
+
+}
+
+.vision-title {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.vision-description {
+    font-size: 16px;
+    color: black;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .vision-container {
+        flex-direction: column;
+        padding: 0px;
+        margin-top: 20px;
+
+    }
+
+    .vision-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .vision-text {
+        padding: 0px;
+    }
+
+    .vision-description {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .vision-image {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,249 @@
+.staff-augmentation-section {
+    padding: 80px 0px 0px 0px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.staff-augmentation-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.staff-augmentation-container h1 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.staff-intro-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.staff-intro-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.staff-intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: black;
+    text-align: justify;
+}
+
+.staff-image {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.staff-image img {
+    width: 100%;
+    max-width: 500px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.staff-features {
+    margin-top: 40px;
+}
+
+.staff-features h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #03989e -150%, #000000 100%);
+    border-left: 4px solid #35d2cc;
+    padding: 20px 25px;
+    border: 1px solid #03989e;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card strong {
+    color: white;
+}
+
+
+
+.staff-process {
+    margin: 30px 0px;
+}
+
+.staff-process h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.process-step {
+    background: linear-gradient(135deg, #03989e -150%, #000000 100%);
+    border-left: 4px solid #35d2cc;
+    padding: 20px 25px;
+    border: 1px solid #03989e;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.process-step strong {
+    color: white;
+}
+
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 30px auto 0;
+}
+
+.cta-button:hover {
+    background-color: #1e40af;
+}
+
+/* Float Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+
+    .staff-augmentation-section {
+        padding-bottom: 0px;
+    }
+
+    .staff-intro-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .staff-augmentation-container h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .staff-intro-text p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .staff-augmentation-section {
+        padding: 90px 15px 0px 15px;
+    }
+
+    .staff-augmentation-container h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .staff-intro-row {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .staff-intro-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .staff-image img {
+        max-width: 90%;
+    }
+
+    .staff-features h3,
+    .staff-process h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .feature-card,
+    .process-step {
+        padding: 16px 20px;
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 14px 0;
+        font-size: 1rem;
+    }
+
+    .feature-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+}

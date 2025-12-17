@@ -1,0 +1,66 @@
+.wwa-section {
+    background: white;
+    font-family: "Poppins", sans-serif;
+    color: #1f2937;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.wwa-heading {
+    color: black;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wwa-text {
+    color: black;
+    padding: 0px 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .wwa-section {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .wwa-heading {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .wwa-text {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wwa-section {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .wwa-heading {
+        font-size: 32px;
+        margin-bottom: 0px;
+    }
+
+    .wwa-text {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wwa-heading {
+        font-size: 28px;
+    }
+
+    .wwa-text {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+}

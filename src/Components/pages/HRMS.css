@@ -1,0 +1,226 @@
+/* ========== Global ========== */
+.hrms-details {
+    margin-top: 30px;
+    padding: 60px 0px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hrms-details h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* ========== Content Layout ========== */
+.hrms-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeUp 1s ease-in-out;
+    margin-bottom: 20px;
+    padding: 0px 30px;
+}
+
+.hrms-text {
+    flex: 1 1 400px;
+    animation: fadeLeft 1.2s ease-in-out;
+}
+
+.hrms-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.hrms-text ul {
+    padding-left: 20px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.hrms-text ul li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative;
+    text-align: start;
+}
+
+.hrms-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.hrms-images {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeRight 1.2s ease-in-out;
+}
+
+.hrms-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.hrms-images img:hover {
+    transform: scale(1.05);
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 991px) {
+    .hrms-details {
+        padding: 60px 0px 0px 0px;
+    }
+
+    .hrms-details h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .hrms-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .hrms-text,
+    .hrms-images {
+        width: 100%;
+        padding: 0 10px;
+        text-align: start;
+    }
+
+    .hrms-text p {
+        font-size: 15px;
+        text-align: start;
+        padding-left: 0;
+    }
+
+    .hrms-text ul {
+        padding-left: 20px;
+        margin-bottom: 0px;
+    }
+
+    .hrms-text ul li {
+        text-align: left;
+        font-size: 14.5px;
+        padding-left: 20px;
+    }
+
+    .hrms-images {
+        gap: 15px;
+    }
+
+    .hrms-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .hrms-details {
+        padding: 60px 0px 0px 0px;
+    }
+
+    .hrms-details h2 {
+        font-size: 1.7rem;
+        margin-bottom: 10px;
+    }
+
+    .hrms-text p {
+        font-size: 14.5px;
+        line-height: 1.6;
+        margin-bottom: 5px;
+    }
+
+    .hrms-text ul li {
+        font-size: 14px;
+        padding-left: 18px;
+    }
+
+    .hrms-images img {
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .get {
+        margin-top: -150px;
+    }
+}

@@ -1,0 +1,116 @@
+/* Container */
+.mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px 0px 20px;
+    width: 100%;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Left Content */
+.mission-left {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.mission-title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: black;
+}
+
+.mission-intro {
+    font-size: 17px;
+    color: black;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* List */
+.mission-list {
+    list-style-type: none;
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    padding-left: 0px;
+}
+
+.mission-list li {
+    margin-bottom: 12px;
+}
+
+.mission-list strong {
+    color: black;
+}
+
+/* Right Image */
+.mission-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.mission-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .mission-container {
+        flex-direction: column-reverse;
+        padding: 30px 15px;
+        margin-top: 50px;
+    }
+
+    .mission-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .mission-left,
+    .mission-right {
+        padding: 10px;
+    }
+
+    .mission-intro,
+    .mission-list {
+        text-align: start;
+        padding-left: 0px;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade + Slide In animation */
+.fade-slide-in {
+    animation: fadeSlideIn 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+
+.fade-slide-in.delay {
+    animation-delay: 0.3s;
+}

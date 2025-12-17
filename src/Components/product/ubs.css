@@ -1,0 +1,160 @@
+.ubs-page {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: white;
+}
+
+/* ============ Hero Section ============ */
+.ubs-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(3, 152, 158, 0.8)),
+    url("../../assets/UBS.jpg") center/cover no-repeat;
+    margin-top: 80px;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ubs-overlay h1 {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ubs-overlay p {
+  color: #fff;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============ Content Section ============ */
+.ubs-content-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 40px 10px 40px;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ubs-image-container img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.ubs-text-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.ubs-text-content h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.ubs-text-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: black;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.ubs-text-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.ubs-text-content ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 20px;
+  position: relative;
+  text-align: start;
+  color: black;
+}
+
+.ubs-text-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #03989e;
+  font-weight: bold;
+}
+
+.ubs-highlight {
+  font-size: 18px;
+  font-weight: 600;
+  color: #026c73;
+}
+
+/* ============ Mobile View ============ */
+@media (max-width: 480px) {
+
+  /* Hero Section */
+  .ubs-hero-section {
+    margin-top: 50px;
+    height: 40vh;
+    /* reduce hero height */
+    padding: 20px;
+  }
+
+  .ubs-overlay h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .ubs-overlay p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  /* Content Section */
+  .ubs-content-section {
+    flex-direction: column;
+    padding: 30px 20px 0px 20px;
+    gap: 20px;
+  }
+
+  .ubs-image-container img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .ubs-text-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .ubs-text-content h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .ubs-text-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  .ubs-text-content ul {
+    margin-bottom: 0px;
+  }
+
+  .ubs-text-content ul li {
+    font-size: 14px;
+    padding-left: 18px;
+  }
+
+  .ubs-highlight {
+    font-size: 16px;
+  }
+}

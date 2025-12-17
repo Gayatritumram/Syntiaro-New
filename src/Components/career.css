@@ -1,0 +1,284 @@
+.careerpage-section {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 0px 20px;
+  background-color: white;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+.careerpage-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.careerpage-header.normal-text {
+  font-size: 1.8rem;
+}
+
+.careerpage-glow-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, #7da4ae, #03989e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.careerpage-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.careerpage-left {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.37);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+
+.careerpage-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.careerpage-why-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.careerpage-why-list li {
+  font-size: 16px;
+  line-height: 3.8;
+  color: black;
+}
+
+.careerpage-openings-btn {
+  width: 50%;
+  padding: 12px 24px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.careerpage-openings-btn:hover {
+  background-color: #03989e;
+  outline: none;
+}
+
+.careerpage-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 15px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.37);
+  color: black;
+}
+
+.careerpage-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.careerpage-form input,
+.careerpage-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: black;
+  transition: border 0.3s;
+}
+
+.careerpage-form input:focus,
+.careerpage-form textarea:focus {
+  border-color: #03989e;
+  outline: none;
+}
+
+.careerpage-form button {
+  width: 50%;
+  padding: 12px;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.careerpage-form button:hover {
+  background-color: #16c81c;
+  font-weight: bold;
+}
+
+.careerpage-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 41, 55, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.careerpage-popup-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.careerpage-popup-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.careerpage-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #374151;
+}
+
+/* Responsive */
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+  .careerpage-body {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 20px 0px;
+  }
+
+  .careerpage-header {
+    margin-bottom: 0px;
+  }
+
+  .careerpage-left,
+  .careerpage-right {
+    width: 90%;
+    min-width: unset;
+  }
+
+  .careerpage-left h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+  }
+
+  .careerpage-form h2 {
+    font-size: 22px;
+  }
+
+  .careerpage-why-list li {
+    line-height: 2.5;
+  }
+
+  .careerpage-openings-btn {
+    width: 60%;
+  }
+
+  .careerpage-form button {
+    width: 60%;
+  }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  .careerpage-section {
+    margin-top: 60px;
+    padding: 40px 0px 10px 0px;
+  }
+
+  .careerpage-body {
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .careerpage-header {
+    margin-bottom: 0px;
+  }
+
+  .careerpage-left h2,
+  .careerpage-form h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .careerpage-why-list li {
+    font-size: 15px;
+    line-height: 2.2;
+    text-align: start;
+  }
+
+  .careerpage-openings-btn {
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  .careerpage-right {
+    margin-top: 20px;
+    padding: 25px 15px 10px 15px;
+  }
+
+  .careerpage-form input,
+  .careerpage-form textarea {
+    font-size: 15px;
+  }
+
+  .careerpage-form button {
+    width: 80%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .careerpage-popup-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .careerpage-popup-image {
+    width: 100%;
+  }
+}

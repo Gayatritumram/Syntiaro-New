@@ -1,0 +1,236 @@
+/* ========= Global ========= */
+.education-container {
+    margin-top: 30px;
+    padding: 60px 0px 0px 0px;
+    background: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+/* ========= Heading ========= */
+.education-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* ========= Layout ========= */
+.education-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0px 30px;
+}
+
+/* ========= Text Section ========= */
+.education-text {
+    flex: 1 1 450px;
+    animation: fadeLeft 1.2s ease-in-out;
+}
+
+.education-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.education-text ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.education-text ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.education-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+/* ========= Images ========= */
+.education-images {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeRight 1.2s ease-in-out;
+}
+
+.education-images img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.education-images img:hover {
+    transform: scale(1.05);
+}
+
+/* ========= Animations ========= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 991px) {
+    .education-container {
+        padding: 40px 0px 0px 0px;
+    }
+
+    .education-heading {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .education-content {
+        flex-direction: column;
+        gap: 00px;
+    }
+
+    .education-text,
+    .education-images {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .education-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 0px;
+    }
+
+    .education-text ul {
+        padding-left: 30px;
+    }
+
+    .education-text ul li {
+        font-size: 14.5px;
+        line-height: 1.7;
+        padding-left: 22px;
+        text-align: left;
+    }
+
+    .education-images {
+        gap: 16px;
+    }
+
+    .education-images img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .education-container {
+        padding: 60px 0px 0px 0px;
+    }
+
+    .education-heading {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .education-content {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .education-text,
+    .education-images {
+        width: 100%;
+        text-align: center;
+        padding: 0 8px;
+    }
+
+    .education-text p {
+        font-size: 14.5px;
+        line-height: 1.6;
+    }
+
+    .education-text ul {
+        padding-left: 25px;
+        margin-bottom: 0px;
+    }
+
+    .education-text ul li {
+        font-size: 14px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .education-images img {
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .get {
+        margin-top: -150px;
+    }
+}

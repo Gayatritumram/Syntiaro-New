@@ -1,0 +1,246 @@
+/* ========== Global ========== */
+.banking-section {
+    margin-top: 30px;
+    padding: 60px 0px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    color: black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.banking-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* ========== Content Layout ========== */
+.banking-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeUp 1s ease-in-out;
+    margin-bottom: 20px;
+    padding: 0px 30px;
+}
+
+.banking-text {
+    flex: 1 1 400px;
+    animation: fadeLeft 1.2s ease-in-out;
+}
+
+.banking-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.banking-text ul {
+    padding-left: 20px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.banking-text ul li {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    position: relative;
+    text-align: start;
+}
+
+.banking-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.banking-images {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeRight 1.2s ease-in-out;
+}
+
+.banking-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.banking-images img:hover {
+    transform: scale(1.05);
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== Responsive ========== */
+/* ========== Tablet View (max-width: 991px) ========== */
+@media (max-width: 991px) {
+    .banking-section {
+        padding: 40px 0px 0 0px;
+    }
+
+    .banking-section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .banking-content {
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+    }
+
+    .banking-text,
+    .banking-images {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .banking-text p {
+        font-size: 15px;
+        line-height: 1.7;
+        padding-left: 0;
+    }
+
+    .banking-text ul {
+        padding-left: 25px;
+    }
+
+    .banking-text ul li {
+        font-size: 14.5px;
+        padding-left: 22px;
+        text-align: left;
+    }
+
+    .banking-images {
+        gap: 16px;
+    }
+
+    .banking-images img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ========== Mobile View (max-width: 576px) ========== */
+@media (max-width: 576px) {
+    .banking-section {
+        padding: 60px 0px 0 0px;
+    }
+
+    .banking-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .banking-content {
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+    }
+
+    .banking-text,
+    .banking-images {
+        width: 100%;
+        padding: 0 8px;
+        text-align: center;
+    }
+
+    .banking-text p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .banking-text ul {
+        padding-left: 22px;
+    }
+
+    .banking-text ul li {
+        font-size: 13.5px;
+        padding-left: 18px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .banking-images img {
+        border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .get {
+        margin-top: -150px;
+    }
+}

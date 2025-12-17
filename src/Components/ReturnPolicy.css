@@ -1,0 +1,130 @@
+/* ReturnPolicy.css */
+
+/* Wrapper Container */
+.return-policy-wrapper {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+/* Banner Image Container */
+.banner-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    margin-top: 80px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Main Policy Content */
+.policy-container {
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.return-policy-content {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.return-policy-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: black;
+    text-align: start;
+}
+
+.return-policy-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: start;
+}
+
+.return-policy-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: black;
+    text-align: start;
+}
+
+.return-policy-content ul {
+
+    margin-bottom: 20px;
+    list-style: none;
+    text-align: start;
+}
+
+.return-policy-content li {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 8px;
+
+}
+
+.return-policy-content strong {
+    color: black;
+}
+
+.return-policy-content a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .policy-container {
+        padding: 40px 40px;
+    }
+
+    .banner-image {
+        margin-top: 80px;
+    }
+
+    .return-policy-content h1 {
+        font-size: 2rem;
+    }
+
+    .return-policy-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .return-policy-content p,
+    .return-policy-content li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .policy-container {
+        padding: 30px 20px;
+    }
+
+    .banner-image {
+        margin-top: 80px;
+    }
+
+    .return-policy-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .return-policy-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .return-policy-content p,
+    .return-policy-content li {
+        font-size: 0.9rem;
+    }
+}

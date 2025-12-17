@@ -1,0 +1,107 @@
+/* --------------------------------------------
+   Terms Page – Custom Styling
+   -------------------------------------------- */
+
+.terms-container-wrapper {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    color: black;
+}
+
+.terms-banner-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.terms-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.terms-content-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+}
+
+.terms-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 25px;
+    text-align: start;
+}
+
+.terms-text h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: black;
+    text-align: start;
+}
+
+.terms-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    color: black;
+    text-align: start;
+}
+
+.terms-text ul {
+    margin-left: 20px;
+    padding-left: 10px;
+    list-style-type: disc;
+    color: black;
+    margin-bottom: 16px;
+    text-align: start;
+    list-style: none;
+}
+
+.terms-text ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.terms-text a {
+    color:black;
+    text-decoration: underline;
+}
+
+.terms-text a:hover {
+    color: rgb(86, 86, 249);
+}
+
+.terms-text strong {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .terms-banner-container {
+        height: 180px;
+    }
+
+    .terms-content-container {
+        padding: 25px 15px;
+    }
+
+    .terms-text h1 {
+        font-size: 2rem;
+    }
+
+    .terms-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .terms-text p,
+    .terms-text ul li {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,79 @@
+.inquiry-section-maiin {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 1px solid black !important;
+      display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inquiry-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.inquiry-heading {
+    color: black !important;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.get-in-touch-btn {
+    background-color: #e8eded ;
+    border: 1px solid black ;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: black !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-in-touch-btn:hover {
+    background-color: #4eabae;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .inquiry-section-maiin {
+        height: 20vh;
+    }
+
+    .inquiry-heading {
+        font-size: 1.7rem;
+        margin-bottom: 18px;
+    }
+
+    .get-in-touch-btn {
+        padding: 11px 22px;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .inquiry-section-maiin {
+        height: 30vh;
+    }
+
+    .inquiry-heading {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .get-in-touch-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

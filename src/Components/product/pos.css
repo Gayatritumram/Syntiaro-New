@@ -1,0 +1,160 @@
+.pos-page {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: white;
+}
+
+/* ============ Hero Section ============ */
+.pos-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(3, 152, 158, 0.85)),
+    url("../../assets/POS.jpg") center 70% / cover no-repeat;
+    margin-top: 80px;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pos-overlay h1 {
+  padding: 0px 1px;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pos-overlay p {
+  padding: 0px 10px;
+  color: #fff;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============ Content Section ============ */
+.pos-content-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 40px 0px 40px;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pos-image-container img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.pos-text-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.pos-text-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #023047;
+}
+
+.pos-text-content p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: black;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.pos-text-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pos-text-content ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding-left: 20px;
+  position: relative;
+  text-align: start;
+  color: black;
+}
+
+.pos-text-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #03989e;
+  font-weight: bold;
+}
+
+.pos-highlight {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #006d77;
+  background-color: #e0f7fa;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* ============ Mobile View (max-width: 768px) ============ */
+@media (max-width: 768px) {
+  .pos-hero-section {
+    margin-top: 50px;
+    height: 40vh;
+    padding: 20px;
+    background-position: center center;
+    margin-top: 20px;
+  }
+
+  .pos-overlay h1 {
+    font-size: 26px;
+    padding: 0 10px;
+  }
+
+  .pos-overlay p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .pos-content-section {
+    flex-direction: column;
+    padding: 30px 20px 0px 20px;
+    gap: 20px;
+  }
+
+  .pos-text-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .pos-text-content h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .pos-text-content p {
+    font-size: 14px;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  .pos-text-content ul {
+    margin-bottom: 0px;
+  }
+
+  .pos-text-content ul li {
+    font-size: 14px;
+  }
+
+  .pos-image-container img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}

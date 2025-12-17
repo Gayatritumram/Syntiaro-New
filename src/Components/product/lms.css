@@ -1,0 +1,163 @@
+.lms-page {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: white;
+}
+
+/* ============ Hero Section ============ */
+.lms-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(3, 152, 158, 0.8)),
+    url("../../assets/LMSBaner.jpg") center/cover no-repeat;
+    margin-top: 80px;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.lms-overlay h1 {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.lms-overlay p {
+  color: #fff;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============ Content Section ============ */
+.lms-content-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 40px 10px 40px;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.lms-image-container img {
+  width: 100%;
+  max-width: 480px;
+}
+
+.lms-text-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.lms-text-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #023047;
+}
+
+.lms-text-content p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: black;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.lms-text-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.lms-text-content ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 20px;
+  position: relative;
+  text-align: start;
+  color: black;
+}
+
+.lms-text-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #03989e;
+  font-weight: bold;
+}
+
+.lms-highlight {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #006d77;
+  background-color: #e0f7fa;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .lms-hero-section {
+    height: 40vh;
+    padding: 20px;
+    background-position: center top;
+    margin-top: 50px;
+  }
+
+  .lms-overlay h1 {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+
+  .lms-overlay p {
+    font-size: 14px;
+    padding: 0 15px;
+    max-width: 90%;
+  }
+
+  .lms-content-section {
+    flex-direction: column;
+    padding: 30px 20px 0px 20px;
+    gap: 20px;
+  }
+
+  .lms-text-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .lms-text-content h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .lms-text-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  .lms-text-content ul {
+    margin-bottom: 0px;
+  }
+
+  .lms-text-content ul li {
+    font-size: 14px;
+    padding-left: 18px;
+  }
+
+  .lms-highlight {
+    font-size: 16px;
+  }
+
+  .lms-image-container img {
+    max-width: 100%;
+    height: 40vh;
+    border-radius: 12px;
+  }
+}

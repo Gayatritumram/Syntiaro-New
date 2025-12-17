@@ -1,0 +1,96 @@
+.aiml-container {
+  padding: 10px 20px 0px 20px;
+  background: white;
+  align-self: center;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.aiml-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+  text-align: center;
+}
+
+.aiml-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.aiml-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.aiml-text {
+  flex: 1;
+  min-width: 300px;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+.aiml-text p {
+  margin-bottom: 16px;
+}
+
+.aiml-bold {
+  font-weight: 600;
+  color: #00ffe0;
+  font-size: 18px;
+}
+
+.aiml-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aiml-image-mobile,
+.aiml-image-desktop {
+  display: none;
+}
+.aiml-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px #03989e;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .aiml-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0px;
+  }
+
+  .aiml-text {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .aiml-image {
+    order: 2; /* Ensure image comes after text */
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .aiml-image img {
+    max-width: 100%;
+    width: 700px;
+  }
+}
