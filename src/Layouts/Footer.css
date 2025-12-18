@@ -1,10 +1,14 @@
 /* Footer Base Styles */
+
 .footer {
     background: #55898a;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 15px 12px 12px;
+    position: relative;   /* <-- added */
+    z-index: 2;           /* <-- added */
 }
+
 
 .footer-container {
     display: grid;

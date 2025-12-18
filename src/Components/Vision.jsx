@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Vision.css";
 import VisionData from "../assets/Vision.png";
 
@@ -9,25 +9,51 @@ const visionParagraphs = [
 
   `We envision a future where even the smallest local business can operate with the sophistication of an enterprise. Through continuous innovation, user-first design, and data-driven strategies, SYNTIARO seeks to bridge the gap between potential and performance.`,
 
-  `Our vision extends beyond technology — it’s about empowering people. We’re committed to fostering a digital world where business owners, employees, and customers alike benefit from seamless, secure, and impactful interactions. As industries transform, SYNTIARO will stand at the forefront — adapting, leading, and delivering software solutions that don’t just support business goals, but redefine them.`
+  `Our vision extends beyond technology — it’s about empowering people. We’re committed to fostering a digital world where business owners, employees, and customers alike benefit from seamless, secure, and impactful interactions.`
 ];
 
 const Vision = () => {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".reveal-left, .reveal-right");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section>
-      <section className="vision-section">
-        <div className="vision-container">
-          <div className="vision-image">
-            <img src={VisionData} alt="Vision Visual" />
-          </div>
-          <div className="vision-text">
-            <h2 className="vision-title">Vision</h2>
-            {visionParagraphs.map((para, idx) => (
-              <p key={idx} className="vision-description">{para}</p>
-            ))}
-          </div>
+    <section className="vision-section">
+      <div className="vision-container">
+        
+        {/* Image */}
+        <div className="vision-image reveal-left">
+          <img src={VisionData} alt="Vision Visual" />
         </div>
-      </section>
+
+        {/* Text */}
+        <div className="vision-text reveal-right">
+          <h2 className="vision-title">Our Vision</h2>
+          {visionParagraphs.map((para, idx) => (
+            <p key={idx} className="vision-description">
+              {para}
+            </p>
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 };

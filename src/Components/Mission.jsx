@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Mission.css";
 import MissionImage from "../assets/Mission1.png";
 
@@ -36,13 +36,42 @@ const missionPoints = [
 ];
 
 const Mission = () => {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".reveal-left, .reveal-right");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="mission-container fade-slide-in">
-      <div className="mission-left">
+    <section className="mission-container">
+      {/* Left Content */}
+      <div className="mission-left reveal-left">
         <h2 className="mission-title">Our Mission</h2>
+
         <p className="mission-intro">
-          Our mission is to deliver transformative technology solutions that empower industries such as Agriculture, Education, Health Care, Banking, HRMS, CRM, Drop Shipping, IT Consulting, Desktop Support, and Cloud Services. We strive to enable smarter operations, enhance decision-making, and elevate customer experiences. Through innovative tools and a commitment to excellence, we bridge the gap between traditional practices and modern efficiency, fostering sustainable growth for our clients and communities.
+          Our mission is to deliver transformative technology solutions that
+          empower industries such as Agriculture, Education, Health Care,
+          Banking, HRMS, CRM, Drop Shipping, IT Consulting, Desktop Support,
+          and Cloud Services. We enable smarter operations, enhance
+          decision-making, and elevate customer experiences through innovation
+          and excellence.
         </p>
+
         <ul className="mission-list">
           {missionPoints.map((point, index) => (
             <li key={index}>
@@ -51,12 +80,10 @@ const Mission = () => {
           ))}
         </ul>
       </div>
-      <div className="mission-right fade-slide-in delay">
-        <img
-          src={MissionImage}
-          alt="Mission"
-          className="mission-img"
-        />
+
+      {/* Right Image */}
+      <div className="mission-right reveal-right">
+        <img src={MissionImage} alt="Mission" className="mission-img" />
       </div>
     </section>
   );
