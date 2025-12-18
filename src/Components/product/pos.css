@@ -10,7 +10,7 @@
     url("../../assets/POS.jpg") center 70% / cover no-repeat;
     margin-top: 80px;
   height: 40vh;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   text-align: center;
