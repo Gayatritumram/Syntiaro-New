@@ -1,48 +1,542 @@
-.carousel-item {
+/* ===============================
+   ANIMATED BACKGROUND
+   =============================== */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(130deg, #012731, #024a50, #03989e);
+  background-size: 300% 300%;
+  animation: bgMove 12s infinite alternate ease-in-out;
+  z-index: -10;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 20%; }
+  50% { background-position: 50% 80%; }
+  100% { background-position: 100% 20%; }
+}
+
+/* ===============================
+   PAGE WRAPPER
+   =============================== */
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  padding-top: 60px;
+}
+
+/* ===============================
+   HERO CARD
+   =============================== */
+.hero-card {
+  background-image: url("/src/assets/cool-background-bg.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  width: 85%;
+  padding: 50px 60px;  /* increase height */
+  text-align: center;
+  margin: 0 auto;
+  animation: fadeUp 1.4s ease-out;
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-text {
+  color: #d8ffff;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* ===============================
+   HERO BUTTONS
+   =============================== */
+.hero-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.hero-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.primary {
+  background: #03989e;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.primary:hover {
+  background: #027880;
+  transform: scale(1.06);
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+}
+
+.secondary:hover {
+  background: rgb(247, 246, 246);
+  transform: scale(1.06);
+}
+
+/* ===============================
+   SERVICES SECTION
+   =============================== */
+.services-section {
+  padding: 80px 0;
+  background: #f8ffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #013c45;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.service-card {
+  background: rgb(209, 237, 237);
+  width: 260px;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: .3s;
+}
+
+.service-card h3 {
+  color: #03989e;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===============================
+   BANNER DARK
+   =============================== */
+.banner-dark {
+  width: 100%;
+  padding: 110px 0;
+}
+
+.banner-text h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.banner-text p {
+  font-size: 1.15rem;
+  width: 80%;
+  line-height: 1.5;
+  color: #ffffff; 
+}
+
+
+.banner-image img {
+  width: 460px;
+  border-radius: 12px;
+  box-shadow: 0 16px 35px rgba(0,0,0,0.25);
+}
+
+/* ===============================
+   PRODUCTS
+   =============================== */
+.product-section {
+  padding: 90px 0;
+  background-image: url("../assets/pexelbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #666;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.product-card {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+
+/* .product-card {
+  width: 280px;
+  background: #d1eef0;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+} */
+
+/* ===============================
+   BANNER LIGHT
+   =============================== */
+.banner-light {
+  background: #a6b0bf;
+  padding: 90px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.banner-light-content h2 {
+  font-size: 2.4rem;
+  color: #01363c;
+}
+
+.banner-light-content p {
+  width: 65%;
+  margin: 0 auto 45px auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.banner-light-content img {
+  width: 640px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+.industries-section {
+  padding: 90px 0;
+  background: #f8ffff;
+  text-align: center;
+}
+
+.industries-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.industry-card {
+  background: white;
+  width: 250px;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: .3s ease;
+  animation: fadeUp 1.3s ease-in-out;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.17);
+}
+
+.industry-card h3 {
+  color: #03989e;
+  margin-bottom: 8px;
+}
+
+.industry-card p {
+  color: #333;
+  font-size: 0.9rem;
+}
+.mission-vision-section {
+  padding: 90px 0;
+  background: white;
+  text-align: center;
+}
+
+.mv-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.mv-card {
+  width: 350px;
+  background: #f8ffff;
+  border-radius: 16px;
+  padding: 35px 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+.mv-card h3 {
+  color: #03989e;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.mv-card p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+.why-section {
+  padding: 90px 0;
+  background: #f8ffff;
+  text-align: center;
+}
+
+.why-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 45px;
+}
+
+.why-card {
+  background: white;
+  width: 260px;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: .3s;
+  animation: fadeUp 1.2s ease-in-out;
+  cursor: pointer;
+}
+
+.why-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.18);
+}
+
+.why-card h3 {
+  color: #03989e;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.35rem;
+}
+.careers-section {
+  padding: 90px 0;
+  background: white;
+  text-align: center;
+}
+
+.careers-text {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.careers-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.career-card {
+  width: 260px;
+  background: #f8ffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: .3s;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.career-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.18);
+}
+
+.career-card h3 {
+  color: #03989e;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.career-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.career-btns {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.career-primary-btn {
+  background: #03989e;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.career-secondary-btn {
+  background: transparent;
+  border: 2px solid #03989e;
+  color: #03989e;
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.career-primary-btn:hover {
+  background: #027880;
+  transform: scale(1.05);
+}
+
+.career-secondary-btn:hover {
+  background: #03989e;
+  color: white;
+  transform: scale(1.05);
+}
+.final-cta-section {
+  padding: 90px 0;
+  background: linear-gradient(140deg, #012731, #024a50, #03989e);
+  background-size: 200% 200%;
+  animation: bgMove 12s infinite alternate ease-in-out;
+  text-align: center;
+  color: white;
+}
+
+.final-cta-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  line-height: 3rem;
+}
+
+.final-cta-btn {
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  background: white;
+  border: none;
+  color: #03989e;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+}
+
+.final-cta-btn:hover {
+  background: #027880;
+  color: white;
+  transform: scale(1.06);
+}
+.banner-dark {
+  width: 100%;
+  background: linear-gradient(140deg, #012731, #024a50, #03989e);
+  padding: 100px 0;
+  color: white;
+}
+
+.banner-content {
+  max-width: 1300px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f4f4f4;
-
+  gap: 40px;
 }
 
-.carousel-content {
-  max-width: 45%;
+.banner-text h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.carousel-content h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.carousel-content p {
+.banner-text p {
+  width: 80%;
   font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.banner-image img {
+  width: 480px;
+  border-radius: 10px;
+}
+.banner-light {
+  background: #f9f9fb;
+  padding: 90px 0;
+  text-align: center;
+}
+
+.banner-light-content h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: #012731;
 }
 
-.carousel-content a {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #0067b8;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 500;
+.banner-light-content p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 45px;
 }
 
-.carousel-image img {
-  width: 600px;
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: black;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black;
-  border-radius: 50%;
+.banner-light-content img {
+  width: 700px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }

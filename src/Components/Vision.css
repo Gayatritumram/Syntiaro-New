@@ -92,3 +92,52 @@
         margin-bottom: 20px;
     }
 }
+/* ===============================
+   SCROLL REVEAL – VISION
+   =============================== */
+
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 0.9s ease-out;
+}
+
+.reveal-left {
+  transform: translateX(-40px) scale(0.97);
+}
+
+.reveal-right {
+  transform: translateX(40px) scale(0.97);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* ===============================
+   ZOOM-OUT ON HOVER
+   =============================== */
+
+.vision-image,
+.vision-text {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vision-image:hover,
+.vision-text:hover {
+  transform: scale(0.97); /* ZOOM OUT */
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   MOBILE SAFETY
+   =============================== */
+
+@media screen and (max-width: 768px) {
+  .vision-image:hover,
+  .vision-text:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

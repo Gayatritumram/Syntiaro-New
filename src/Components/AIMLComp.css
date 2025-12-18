@@ -1,96 +1,137 @@
+/* ===============================
+   AI / ML – SINGLE CARD VERSION
+   =============================== */
+
 .aiml-container {
-  padding: 10px 20px 0px 20px;
-  background: white;
-  align-self: center;
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
   font-family: "Poppins", sans-serif;
-  color: black;
-  width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
-  border-radius: 12px;
 }
 
+/* Header */
 .aiml-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  color: black;
   text-align: center;
+  margin-bottom: 12px;
+  color: #0f172a;
 }
 
 .aiml-subtitle {
   text-align: center;
-  font-size: 18px;
-  color: black;
-  margin-bottom: 30px;
+  font-size: 20px;
+  color: #475569;
+  margin-bottom: 70px;
 }
 
+/* Layout */
 .aiml-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 70px;
   align-items: center;
 }
 
-.aiml-text {
+/* ---------- MAIN CARD ---------- */
+.aiml-main-card {
   flex: 1;
-  min-width: 300px;
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: justify;
-  margin-top: 15px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 42px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #03989e;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.aiml-text p {
+.aiml-main-card h3 {
+  font-size: 24px;
   margin-bottom: 16px;
+  color: #0f172a;
 }
 
-.aiml-bold {
-  font-weight: 600;
-  color: #00ffe0;
-  font-size: 18px;
+.aiml-main-card p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 14px;
 }
 
+/* ---------- IMAGE ---------- */
 .aiml-image {
-  flex: 1;
-  min-width: 300px;
+  flex: 1.2;
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.aiml-image-mobile,
-.aiml-image-desktop {
-  display: none;
-}
-.aiml-image img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px #03989e;
 }
 
-/* Responsive */
-@media screen and (max-width: 1024px) {
+.aiml-image img {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 32px;
+  box-shadow: 0 22px 60px rgba(3, 152, 158, 0.45);
+  animation: floatAI 10s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes floatAI {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------- Scroll Reveal ---------- */
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.reveal-left {
+  transform: translateX(-40px) scale(0.96);
+}
+
+.reveal-right {
+  transform: translateX(40px) scale(0.96);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Hover micro-interaction */
+.aiml-main-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.12);
+}
+
+.aiml-image img:hover {
+  transform: scale(1.04);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
   .aiml-content {
     flex-direction: column;
     text-align: center;
-    gap: 0px;
   }
 
-  .aiml-text {
+  .aiml-main-card {
+    padding: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aiml-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .aiml-subtitle {
+    font-size: 17px;
+  }
+
+  .aiml-main-card p {
     font-size: 15px;
-    width: 100%;
-  }
-
-  .aiml-image {
-    order: 2; /* Ensure image comes after text */
-    margin-top: 20px;
-    justify-content: center;
-  }
-
-  .aiml-image img {
-    max-width: 100%;
-    width: 700px;
   }
 }
