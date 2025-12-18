@@ -132,7 +132,7 @@ export default function POS() {
           </div>
 
           <div>
-            <h4>Support</h4>
+            <h4>Support  </h4>
             <p>Help Center</p>
             <p>Contact Us</p>
           </div>
