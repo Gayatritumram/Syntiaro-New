@@ -22,29 +22,18 @@ p {
   color: #444;
 }
 
-/* ================= HERO SECTION (BANNER) ================= */
+/* ================= HERO SECTION ================= */
 .about-hero {
-  min-height: 60vh;                 /* Banner size */
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 80px 10% 60px;
   position: relative;
-
-  /* Dark tech background */
   background:
-    radial-gradient(
-      circle at top right,
-      rgba(0, 194, 255, 0.18),
-      transparent 45%
-    ),
-    linear-gradient(
-      135deg,
-      #020617,
-      #071a2f,
-      #020617
-    );
+    radial-gradient(circle at top right, rgba(0, 194, 255, 0.18), transparent 45%),
+    linear-gradient(135deg, #020617, #071a2f, #020617);
 }
 
 .hero-content h1 {
@@ -94,6 +83,10 @@ p {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
 }
 
+.who-content p {
+  margin-bottom: 18px;
+}
+
 .underline {
   display: block;
   width: 70px;
@@ -107,54 +100,60 @@ p {
   margin: 15px auto 30px;
 }
 
-.who-content p {
-  margin-bottom: 18px;
-}
-
 /* ================= MISSION & VISION ================= */
 .mission-vision {
-  padding: 100px 8%;
+  padding: 80px 8%;
   background: linear-gradient(135deg, #f9fbfd, #eef7f7);
 }
 
 .mv-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .mv-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .mv-card {
   background: #ffffff;
-  padding: 45px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  border-radius: 18px;
+  border-left: 4px solid #00c2ff;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .mv-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.12);
 }
 
 .mv-card h3 {
   color: #00a8a8;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
   .who-container {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
 
   .mv-grid {
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;          /* 🔥 reduced spacing */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
 
   .hero-content h1 {
     font-size: 48px;
@@ -169,10 +168,13 @@ p {
   .about-hero {
     min-height: 45vh;
     padding: 60px 6%;
-    color: #eef7f7;
   }
 
   p {
     font-size: 16px;
+  }
+
+  h2 {
+    font-size: 34px;
   }
 }

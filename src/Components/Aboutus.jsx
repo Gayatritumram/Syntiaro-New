@@ -67,50 +67,33 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ================= MISSION & VISION ================= */}
-      <section className="mission-vision">
-        <div className="mv-header">
-          <h2>Mission & Vision</h2>
-          <span className="underline center"></span>
+        {/* MISSION & VISION SECTION */}
+      <section className="mission-vision-section">
+
+        <h2 className="section-title">Our Mission & Vision</h2>
+
+        <div className="mv-container">
+
+          <div className="mv-card">
+            <h3>Mission</h3>
+            <p>
+              To empower businesses and innovators by delivering scalable,
+              transformative, and future-ready technology solutions that drive
+              measurable impact.
+            </p>
+          </div>
+
+          <div className="mv-card">
+            <h3>Vision</h3>
+            <p>
+              To become a global leader in digital innovation, fostering a world
+              where ideas evolve into breakthrough solutions that shape industries
+              and uplift communities.
+            </p>
+          </div>
+
         </div>
 
-        <div className="mv-grid">
-
-          <motion.div
-            className="mv-card"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <h3>Our Mission</h3>
-            <p>
-              Our mission is to revolutionize industries by delivering
-              cutting-edge, integrated solutions that empower growth,
-              innovation, and transformation.
-            </p>
-            <p>
-              We strive to uplift <strong>Agriculture, Education, Healthcare</strong>,
-              and emerging sectors through technology-driven excellence.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="mv-card"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h3>Our Vision</h3>
-            <p>
-              Our vision is to lead the future of global innovation by creating
-              a connected, intelligent ecosystem that transforms how industries
-              operate, people engage, and businesses evolve.
-            </p>
-          </motion.div>
-
-        </div>
       </section>
 
     </div>
